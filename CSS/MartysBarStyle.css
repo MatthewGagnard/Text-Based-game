@@ -1,0 +1,28 @@
+body{
+	background-color: gray;
+	color: #39000d;
+}
+
+#bouncer{
+	width:75%;
+	height: 50%;
+	margin:auto;
+	display:block;
+	border:outset black 5px;
+}
+
+.dialogue{
+	border:outset darkred;
+	background-color: darkgray;
+	text-align: center;
+}
+
+.btalk{
+	color:white;
+	font-style: normal;
+}
+
+#text{
+	background-color: black;
+	color:red;
+	font-style: italic;}

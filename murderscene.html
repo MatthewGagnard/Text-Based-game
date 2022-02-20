@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Who Dunnit?</title>
+	<link href='CSS/MurderSceneStyle.css' rel=stylesheet>
+</head>
+<body>
+	<h1 class='Location'> Crime Scene (INT.)</h1>
+	<hr>
+	<div class='crimescene'> <!-- Divide up halves of the screen for visibility -->
+	<div class='CorpseSolve'> <!-- Divide up halves of the screen for visibility -->
+
+	<img class='corpse' onclick= 'return grabpass()' src='Assets/corpse.png' width='400' height="400" href=
+	'#'>  <!-- Clicking on corpse gives Evidence -->
+
+	</div>
+	<div class='SafeSolve'>
+	<img class='Safe' src='Assets/Safe.png' onClick="trysafe()" >
+	<input type='number' id='day' min='0' max='99'>
+	<input type='number' id='month' min='0' max='99'>
+	<input type='number' id='year' min='0' max='99'>
+	</div>
+	</div>
+	<div class='dialogue'>
+	<p id='text'>Back to the scene of the crime. The room seems pretty empty except for the <span class='important'> Corpse and Safe</span></p>
+	<div class='ev'>
+	<iframe src='evidence.html' id=evidence height=100 width=150> </iframe>
+	<a id='exit' href='office.html'>
+		<button> Back to the office</button>
+	</a>
+	</div>
+	</div>
+
+
+
+
+	<script>
+		evidence.src += location.search;
+		exit.href += location.search;
+		var queryString = new URLSearchParams(window.location.search);
+		var ep = +queryString.get("ep");
+		var eg = +queryString.get("eg");
+		var audio = new Audio('Assets/Discover.mp3');
+
+		function grabpass(){
+			if(ep>=1)
+			{
+				document.getElementById('text').innerHTML = 'This is where I found the membership card. The birthday was: <span class= "important"> 17 april 1995</span>';
+			}
+			else{
+				audio.play();
+				ep++;
+				queryString.set('ep',ep);
+				evidence.src = 'evidence.html?'+queryString;
+				text.innerHTML = 'Hmm looks like something we missed. Its a membership to some place called Martys. It has her birthday on here. <span class= "important"> 17 april 1995</span>. Better take this with me.';
+				exit.innerHTML=`<a href='office.html?${queryString}'><button>Back to the office</button></a>`;
+			}
+		}
+
+		function trysafe(){
+			if(day.value ==17&&month.value==4&&year.value==95&&eg<1){
+				audio.play();
+				eg++;
+				queryString.set('eg',eg);
+				evidence.src = 'evidence.html?'+queryString;
+				text.innerHTML='That was the code! Inside was the <span class="important">the MURDER WEAPON</span> as well as cash and and a group photo of Casey, Micah, and Sally';
+				exit.innerHTML=`<a href='office.html?${queryString}'><button>Back to the office</button></a>`;
+			}
+			else if(eg>=1)
+			{
+				text.innerHTML='This is the safe where I found the gun, and other items. Does not seem to be like anything else.';
+			}
+			else{
+				text.innerHTML='That did not work!';
+			}
+		}
+			</script>
+</body>
+</html>

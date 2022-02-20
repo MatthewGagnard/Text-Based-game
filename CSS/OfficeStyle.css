@@ -1,0 +1,40 @@
+body{
+	background-color: gray;
+	color: #39000d;
+}
+
+.Location{
+	text-align: center;
+	font-style: italic;
+}
+
+.rain{
+	display:block;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dialogue{
+	border:outset darkred;
+	background-color: darkgray;
+	text-align: center;
+}
+
+ul{
+	list-style-position: inside;
+	text-decoration-line: underline;
+	font-weight: bold; 
+	text-align: left;
+	color:black;
+}
+
+button:hover{
+	color:red;
+	background-color: black;
+}
+
+h3{
+	background-color: black;
+	color:red;
+}

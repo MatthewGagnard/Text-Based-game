@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Who Dunnit?</title>
+		<link href='CSS/StationStyle.css' rel=stylesheet>
+		</head>
+	<body>
+		<image id='AD' onclick='talk()'src=Assets/Attorney.jpg>
+		<div class='Dialogue'>
+		<p id='text'>This is the DA, if i'm ready to make the arrest I need to tell him who to go after:<span class='btalk'> Make it quick, Im handling another murder and need to wrap this one up soon!</span></p>
+		<input type='text' id='accused' name='name'>
+		<input id='submit' type='submit' value='Condemn' onclick='Condemn()'>
+
+<div class='ev'>
+	<iframe src='evidence.html' id='evidence' height=100 width=150> </iframe>
+<p></p>
+	<a href='office.html' id='office'>
+		<button> I'm not ready. Better go look for more clues. </button></a>
+</div>
+</div>
+<script>
+	evidence.src += location.search;
+	office.href += location.search;
+	var audio = new Audio('Assets/Discover.mp3');
+
+	function talk(){
+		audio.play();
+		text.innerHTML='<span class="btalk">Like I said, I am in a rush! We have another investigation on the murder of <span class="important"> MICAH OLPHENT </span> that I need to be working on.</span>';
+	}
+
+	function Condemn(){
+		if(document.getElementById('accused').value=='Devin Olphent'){
+			window.location.href='Tend.html'
+		}
+		else{
+			window.location.href='end.html'
+		}
+	}
+</script>
+	</body>
+</html>

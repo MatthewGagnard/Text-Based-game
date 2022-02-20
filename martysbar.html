@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Who Dunnit?</title>
+    <link href='CSS/MartysBarStyle.css' rel=stylesheet>
+  </head>
+
+
+
+  <body>
+  	<a id='door' href=#>
+    <img id='bouncer' onclick= 'return showpass()' src='Assets/security_still.gif' width='400' height="400" href='#'></a>
+    <div class='dialogue'>
+      <p id='text'>He looks at you:<span class='btalk'> No pass no entry pal</span>
+      </p>
+      <div class='ev'>
+        <iframe src='evidence.html' id='evidence' height=100 width=150></iframe>
+        <a id='downtown' href='downtown.html'>
+          <button> Back downtown</button>
+        </a>
+      </div>
+    </div>
+    <script>
+    evidence.src += location.search;
+	downtown.href += location.search;
+		var queryString = new URLSearchParams(window.location.search);
+		var ep = +queryString.get("ep");
+		var eg = +queryString.get("eg");
+		var audio = new Audio('Assets/Discover.mp3');
+
+		function showpass(){
+			if(ep>=1)
+			{
+				audio.play();
+				text.innerHTML='this works';
+				bouncer.src='Assets/dooropen.gif';
+				door.href='insidebar.html?'+queryString;
+			}
+			else{
+				text.innerHTML='<span class="btalk"> No pass no entry pal</span>';
+			}
+		}
+    </script>
+  </body>
+</html>

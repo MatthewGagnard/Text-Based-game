@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Who Dunnit?</title>
+	</head>
+<body>
+	Evidence <hr>
+	<table>
+		<tr>
+		<th>&#10075;</th>
+		<th>&#10163;</th>
+		</tr>
+	<tr>
+		<td id='ep'>0</td>
+		<td id='eg'>0</td>
+	</tr>
+	</table>
+<script>
+var queryString = new URLSearchParams(window.location.search);
+ep.innerText = queryString.get("ep");
+eg.innerText = queryString.get("eg");
+</script>
+</body>
+</html>

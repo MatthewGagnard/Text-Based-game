@@ -1,0 +1,29 @@
+
+<html>
+<head>
+	<title>Who dunnit?</title>
+	<link href='CSS/DowntownStyle.css' rel=stylesheet>
+</head>
+<body>
+<image class='crossroad'src='Assets/downtown.jpeg'> </image>
+<div class='dialogue'>
+	<p class='monologue'>The hustle and bustle of downtown. Where should I go to look for clues?</p>
+	<p></p>
+	<h1> Where should I go next? </h1>
+<iframe src='evidence.html' id='evidence' height=100 width=150> </iframe>
+<p></p>
+	<a href='martysbar.html' id='martysoutside'>
+		<button> Marty's Bar </button></a>
+	<a href='leosled.html' id='leosled'>
+		<button> Leo's Led Gun Emporium </button></a>
+	<a href='office.html' id='office'>
+		<button> Back to the office</button></a>
+</div>
+<script>
+evidence.src += location.search;
+leosled.href += location.search;
+martysoutside.href +=location.search;
+office.href += location.search;
+</script>
+</body>
+</html>

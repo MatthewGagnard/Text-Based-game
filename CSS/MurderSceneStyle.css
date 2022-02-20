@@ -1,0 +1,74 @@
+body{
+	background-color: gray;
+	color: #39000d;
+}
+
+.Location{
+	text-align: center;
+	font-style: italic;
+}
+
+.crimescene{
+	display:flex;
+}
+
+.Corpsesolve{
+	flex:1;
+	border:5px outset darkred;
+	margin-right: 20px;
+	width:50%;
+}
+
+.SafeSolve{
+	flex:1;
+	border:5px outset darkred;
+	margin-right: 20px;
+	width:50%;
+}
+
+.safe{
+	margin:auto;
+	display:block;
+}
+
+.corpse{
+	margin:auto;
+	display:block;
+}
+
+.important{
+	font-weight: bold;
+	color:green;
+}
+
+input[type='number']{
+	margin: auto;
+	display: block;
+}
+
+.dialogue{
+	text-align: center;
+	border:outset darkred;
+	background-color: darkgray;
+	wdith:50%;
+}
+
+button:hover{
+	color:red;
+	background-color: black;
+	margin-bottom: 5px;
+}
+
+#evidence{
+	margin: left;
+}
+
+.ev{
+	display:flex;
+	justify-content: space-evenly;
+}
+
+#text{
+	background-color: black;
+	color:red;
+}

@@ -1,0 +1,24 @@
+body{
+	background-color: gray;
+	color: #39000d;
+}
+
+.crossroad{
+	border: outset black;
+	display:block;
+	width:70%;
+	height: 50%;
+	margin: auto;
+	text-align: center;
+}
+
+.dialogue{
+	border:outset darkred;
+	background-color: darkgray;
+	text-align: center;
+}
+
+.monologue{
+	background-color: black;
+	color:red;
+}

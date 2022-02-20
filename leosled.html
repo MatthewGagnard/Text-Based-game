@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title> Who Dunnit? </title>
+	<link href='CSS/LeosLedStyle.css' rel=stylesheet>
+</head>
+<body>
+	<image id='leo' onclick='talk()'src=Assets/Gunstore.gif>
+		<div class='Dialogue'>
+		<p id='text'>Led guns. Not too many of those left, lets see if Leo knows anthing:<span class='btalk'>You ain't visiting for anything good. What can I do for ya chief?</span></p>
+<div class='ev'>
+<iframe src='evidence.html' id='evidence' height=100 width=150> </iframe>
+<p></p>
+	<a href='downtown.html' id='downtown'>
+		<button> Back downtown </button></a>
+</div>
+</div>
+<script>
+	evidence.src += location.search;
+	downtown.href += location.search;
+	var queryString = new URLSearchParams(window.location.search);
+		var ep = +queryString.get("ep");
+		var eg = +queryString.get("eg");
+		var audio = new Audio('Assets/Discover.mp3');
+
+		function talk(){
+		if(eg>=1){
+			audio.play();
+		text.innerHTML='Leo inspects the gun: <span class="btalk"> I actually remember selling this piece recently. In fact I sold it to that guy right there </span> leo points to the photo of <span class="important">MICAH</span>. Seems we got our man.';
+				}
+		else{
+			text.innerHTML='<span class="btalk"> Sorry chief without any <span class="important">EVIDENCE</span> I cant help ya. </span>';
+		}
+	}
+</script>
+</body>
+</html>

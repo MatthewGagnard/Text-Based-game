@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Who Dunnit?</title>
+</head>
+	<link href='CSS/InsideBarStyle.css' rel=stylesheet>
+<body>
+	<image id='bartender' onclick='talk()'src=Assets/bartender.png>
+		<div class='Dialogue'>
+		<p id='text'><span class='btalk'>Hey stranger, what can I do for you?</span></p>
+<div class='ev'>
+<iframe src='evidence.html' id='evidence' height=100 width=150> </iframe>
+<p></p>
+	<a href='downtown.html' id='downtown'>
+		<button> Back downtown </button></a>
+</div>
+</div>
+<script>
+	evidence.src += location.search;
+	downtown.href += location.search;
+	var audio = new Audio('Assets/Discover.mp3');
+
+	function talk(){
+		audio.play();
+		text.innerHTML='I show him the photo and ask about Casey, and show him the photo I got from the safe: <span class="btalk"> Oh yeah Casey and her gang huh? Shame about <span class="important"> MICAH </span>. If I was his twin brother <span class="important"> DEVIN </span> id be devestated too.';
+	}
+</script>
+</body>
+</html>

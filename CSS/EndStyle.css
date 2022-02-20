@@ -1,0 +1,25 @@
+body{
+	background-color: #202020;
+	color: yellow;
+}
+
+	h1{
+		font-style: italic;
+		text-align: center;
+	}
+.rain{
+	display:block;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.epilogue{
+	text-align: center;
+
+}
+
+button{
+	margin: auto;
+	display: block;
+}

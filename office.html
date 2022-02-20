@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Who Dunnit?</title>
+	<link href='CSS/OfficeStyle.css' rel=stylesheet>
+</head>
+
+<body>
+	<h1 class='Location'> Office (INT.) </h1>
+	<hr>
+
+<img class='rain' src='Assets/Rainy.gif'>
+<p></p>
+<div class='Dialogue'>
+<h3> Here's what I know so far ... </h3>
+<ul>
+<li> Casey Bradshaw was murdered Tuesday, April 15th, 1:45am. Exactly 40 hours ago.</li>
+<li> Murder weapon was a revolver of some type, never recovered </li>
+<li> Suspects include: 
+	<ul> <li>Micah Olphent</li> <li> Sally Griswald</li>  <li>Denver Broncos</li> </ul>
+</ul>
+<h1> Where should I go next? </h1>
+<iframe src='evidence.html' id='evidence' height=100 width=150> </iframe>
+<p></p>
+	<a href='murderscene.html' id='murderscen'>
+		<button> Head to the scene of the crime </button></a>
+	<a href='station.html' id='station'>
+		<button> Head to the station, accuse a murderer</button></a>
+	<a href='downtown.html' id='downtown'>
+		<button> Head into town to look for clues</button></a>
+</div>
+
+<script>
+evidence.src += location.search;
+murderscen.href += location.search;
+station.href += location.search;
+downtown.href += location.search;
+</script>
+</body>
+</html>

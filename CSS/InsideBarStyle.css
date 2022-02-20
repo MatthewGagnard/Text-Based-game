@@ -1,0 +1,33 @@
+body{
+	background-color: gray;
+	color: #39000d;
+}
+
+.dialogue{
+	border:outset darkred;
+	background-color: darkgray;
+	text-align: center;
+}
+
+#text{
+	background-color: black;
+	color:red;
+	font-style: italic;}
+
+#bartender{
+	width:75%;
+	height: 50%;
+	margin:auto;
+	display:block;
+	border:outset black 5px;
+}
+
+.btalk{
+	color:white;
+	font-style: normal;
+}
+
+.important{
+	font-weight: bold;
+	color:green;
+}
